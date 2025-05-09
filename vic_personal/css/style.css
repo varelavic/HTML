@@ -2,30 +2,131 @@
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
+  background-color: black
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   background-image: url(../img/header5.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 20% 30%;
   width: 100%;
-  height: 500px;
+  height: 550px;
+}
+
+ul.menu {
+  text-align: center;
 }
 ul.menu li {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: auto;
+  margin-left: auto;
   text-decoration: none;
   color: #ffffff41;
 }
+
 ul.menu li a {
   text-decoration: none;
   color: #fff;
   padding: 10px;
   display: block;
 }
+
 ul.menu li a:hover {
   color: gray;
 }
-html {
-  background-color: #3c3c3c;
+
+#CV {
+  display: grid;
+  grid-template-columns: 30% 70%;
 }
+
+#CV .personal {
+  display: grid;
+  align-content: start;
+}
+
+#CV .personal img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 40px;
+  margin-top: 100px;
+}
+
+#CV .personal h3,
+#CV .personal p {
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+#CV .datos {
+  display: grid;
+  margin-left: 80px;
+  align-content: space-around;
+  color:#fff;
+}
+
+#CV .datos * {
+  margin: 10px;
+}
+
+#CV .datos .ultimo {
+  margin-bottom: 60px;
+}
+#CV .datos h3{
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  #CV {
+    grid-template-columns: 1fr; /* Solo una columna */
+  }
+
+  #CV .datos {
+    margin-left: 20px; /* reducir margen en móviles */
+  }
+
+  #CV .personal img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  #CV .personal h3, 
+  #CV .personal p,
+  #CV .datos h3 {
+    font-size: 1em;
+  }
+}
+
+
+hr {
+  width: 50%;
+  margin: 20px auto;
+  border: none;
+  border-top: 2px solid #555;
+  background: transparent;
+}
+  
+#proyectos {
+  background-color: rgb(42, 36, 36);
+  color: #fff;
+}
+
